@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.vanderchef.GoBuildSystem</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.base</string>
+		<string>com.apple.dt.unit.macBase</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template builds using an std Go build system.</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>goBuildToolPath</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Go Build Tool</string>
+			<key>Description</key>
+			<string>The path to the Go build tool to use</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>/usr/local/go/bin/go</string>
+		</dict>
+	</array>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>TargetType</key>
+			<string>Legacy</string>
+			<key>BuildToolPath</key>
+			<string>___VARIABLE_goBuildToolPath___</string>
+			<key>BuildToolArgsString</key>
+			<string>build $(ACTION)</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>GOPATH</key>
+				<string></string>
+				<key>OTHER_CFLAGS</key>
+				<string></string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+			</dict>
+			<key>Configurations</key>
+			<dict>
+				<key>Debug</key>
+				<dict>
+					<key>DEBUGGING_SYMBOLS</key>
+					<string>YES</string>
+					<key>GCC_GENERATE_DEBUGGING_SYMBOLS</key>
+					<string>YES</string>
+					<key>GCC_OPTIMIZATION_LEVEL</key>
+					<string>0</string>
+				</dict>
+				<key>Release</key>
+				<dict/>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
