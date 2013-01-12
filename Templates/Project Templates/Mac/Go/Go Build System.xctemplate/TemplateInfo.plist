@@ -14,7 +14,7 @@
 	<key>Concrete</key>
 	<true/>
 	<key>Description</key>
-	<string>This template builds using an std Go build system.</string>
+	<string>This template creates a project using a std Go build system.</string>
 	<key>Options</key>
 	<array>
 		<dict>
